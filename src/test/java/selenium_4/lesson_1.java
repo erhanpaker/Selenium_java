@@ -19,6 +19,7 @@ public class lesson_1 {
 
         driver.get("https://amazon.com");
         WebElement aramakutusu = driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]"));
+        aramakutusu.sendKeys("nutella");
         aramakutusu.submit();
 
         WebElement sonucyazielementi = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
