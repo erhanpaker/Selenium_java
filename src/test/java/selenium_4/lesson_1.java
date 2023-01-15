@@ -21,6 +21,9 @@ public class lesson_1 {
         WebElement aramakutusu = driver.findElement(By.xpath("//*[@id=\"twotabsearchtextbox\"]"));
         aramakutusu.submit();
 
+        WebElement sonucyazielementi = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
+        System.out.println(sonucyazielementi.getText());
+
 
     }
 }
