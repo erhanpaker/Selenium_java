@@ -25,6 +25,8 @@ public class lesson_1 {
         WebElement sonucyazielementi = driver.findElement(By.xpath("//div[@class='a-section a-spacing-small a-spacing-top-small']"));
         System.out.println(sonucyazielementi.getText());
 
+        driver.close();
+
 
     }
 }
