@@ -28,5 +28,15 @@ public class lesson_1 {
         WebElement loginButton = driver.findElement(By.xpath("//button[@name='login' ]"));
         loginButton.click();
 
+        WebElement sonucyazi = driver.findElement(By.xpath("//div[@class='_9ay7' ]"));
+        String excpectedsonuc  = " The password that you've entered is incorrect. Forgotten password?";
+        String actualsonucyazisi = sonucyazi.getText();
+        if (excpectedsonuc.equals(actualsonucyazisi)){
+            System.out.println("girilemedi testi pass ");
+
+        }else {
+            System.out.println("girlemedi testi faild");
+        }
+        driver.close();
     }
 }
