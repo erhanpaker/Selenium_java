@@ -1,50 +1,43 @@
 package seleneium_7;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
 public class lesson_1 {
-
-    @Test
-
-    public void test1(){
-
+    WebDriver driver;
+    @Before
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+    }
 
-        driver.get("https://www.amazon.com/");
-
+    @After
+    public void tearDown() {
         driver.close();
     }
+
     @Test
-    public void test2(){
-
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
-
-        driver.get("https://www.facebook.com/");
-
-        driver.close();
+    public void test01() {
+        driver.get("https:www.amazon.com");
     }
-     @Test
-    public void test3(){
+    @Test
+    public void test02() {
 
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.get("https:www.bestbuy.com");
+    }
+    @Test
+    public void test03() {
 
-        driver.get("https://twitter.com/");
-
-        driver.close();
+        driver.get("https:www.facebook.com");
     }
 
 }
