@@ -26,6 +26,8 @@ public class lesson_1 {
         for (WebElement each:buttonlist){
             System.out.println(each.getText());
 
+            // 5 video devam
+
         }
 
 
