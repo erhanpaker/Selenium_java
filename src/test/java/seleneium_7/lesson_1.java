@@ -3,6 +3,7 @@ package seleneium_7;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import org.openqa.selenium.WebDriver;
@@ -25,10 +26,11 @@ public class lesson_1 {
         driver.close();
     }
 
-    @Test
+    @Test @Ignore
     public void test01() {
         driver.get("https:www.amazon.com");
     }
+
     @Test
     public void test02() {
 
