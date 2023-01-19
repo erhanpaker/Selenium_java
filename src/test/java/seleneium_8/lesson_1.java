@@ -24,8 +24,12 @@ public class lesson_1 {
 
         driver.get("https://automationexercise.com/");
 
-        WebElement login = driver.findElement(By.xpath("//img[@src='/static/images/home/logo.png']"));
-        Assert.assertTrue(login.isDisplayed());
+       WebElement logo = driver.findElement(By.xpath("//img[@src='/static/images/home/logo.png']"));
+       Assert.assertTrue(logo.isDisplayed());
+
+       WebElement signup = driver.findElement(By.xpath(" //a[text()=' Signup / Login']"));
+       signup.click();
+
 
 
 
