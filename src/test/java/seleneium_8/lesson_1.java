@@ -30,6 +30,34 @@ public class lesson_1 {
        WebElement signup = driver.findElement(By.xpath(" //a[text()=' Signup / Login']"));
        signup.click();
 
+       WebElement yazi = driver.findElement(By.xpath(" //h2[text()='Login to your account']"));
+       Assert.assertTrue(yazi.isDisplayed());
+
+
+       WebElement password = driver.findElement(By.xpath("//input[@data-qa='login-email']"));
+       password.sendKeys("erhanpaker@gmail.com");
+
+        WebElement login = driver.findElement(By.xpath("//input[@data-qa='login-password']"));
+        login.sendKeys("12345");
+
+        WebElement button = driver.findElement(By.xpath("//button[@data-qa='login-button']"));
+        button.click();
+
+        WebElement bulma = driver.findElement(By.xpath("//a[text()= ' Logged in as ']"));
+        Assert.assertTrue(bulma.isDisplayed());
+
+        driver.findElement(By.xpath("//a[text()=' Logout']")).click();
+        String expectedurl = "https://automationexercise.com/login";
+        String acturalurl = driver.getCurrentUrl();
+        Assert.assertEquals(expectedurl,acturalurl);
+        driver.close();
+
+
+
+
+
+
+
 
 
 
