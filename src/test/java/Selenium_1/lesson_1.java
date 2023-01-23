@@ -11,10 +11,20 @@ public class lesson_1 {
         WebDriver driver= new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.amazon.com");
-        Thread.sleep(2000);
+
+        Thread.sleep(200);
 
         driver.navigate().to("https://online.wisequarter.com/");
-        Thread.sleep(2000);
+        Thread.sleep(200);
+
+        driver.navigate().back();
+        Thread.sleep(200);
+
+        driver.navigate().forward();
+
+
+
+
 
 
 
