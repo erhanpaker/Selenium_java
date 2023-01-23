@@ -5,16 +5,22 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class lesson_1 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         WebDriverManager.chromedriver().setup();
         WebDriver driver= new ChromeDriver();
+        driver.manage().window().maximize();
         driver.get("https://www.amazon.com");
+        Thread.sleep(2000);
 
-        System.out.println("sayfa title :" + driver.getTitle());
-        System.out.println(driver.getCurrentUrl());
-        System.out.println(driver.getPageSource());
-        System.out.println(driver.getWindowHandle());
+        driver.navigate().to("https://online.wisequarter.com/");
+        Thread.sleep(2000);
+
+
+
+
+
+
 
 
     }

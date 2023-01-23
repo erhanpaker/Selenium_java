@@ -12,6 +12,8 @@ public class lesson_1 {
 
     public static void main(String[] args) {
 
+    } {
+
         WebDriverManager.chromedriver().setup();
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -26,6 +28,8 @@ public class lesson_1 {
         System.out.println(sonucyazielementi.getText());
 
         driver.close();
+
+
 
 
     }
