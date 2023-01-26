@@ -1,4 +1,4 @@
-package selenium_9;
+package seleneium_7.selenium_9;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;

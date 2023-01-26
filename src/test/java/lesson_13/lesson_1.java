@@ -25,7 +25,7 @@ public class lesson_1 {
         WebElement login = driver.findElement(By.xpath("//input[@id='user_password']"));
         login.sendKeys("password");
 
-        driver.findElement(By.xpath("//input[@type='submit']")).click();
+         driver.findElement(By.xpath("//input[@type='submit']")).click();
         driver.navigate().back();
 
         driver.findElement(By.xpath("  //strong[text()='Online Banking']")).click();
